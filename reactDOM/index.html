@@ -15,7 +15,13 @@
     <script>
       const root = document.querySelector("#root");
 
-      const element = React.createElement("ul", { className: "list" }, React.createElement("li", null, "apple"), React.createElement("li", null, "mango"), React.createElement("li", null, "orange"));
+      const element = (
+        <ul className="list">
+          <li>aplle</li>
+          <li>mango</li>
+          <li>orange</li>
+        </ul>
+      );
 
       console.log("ok");
       ReactDOM.render(element, root);
