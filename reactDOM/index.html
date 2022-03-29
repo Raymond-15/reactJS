@@ -16,15 +16,18 @@
     <script type="text/babel">
       const root = document.querySelector("#root");
 
+      function Buah(props) {
+        return <li>{props.name}</li>;
+      }
+
       const element = (
         <ul className="list">
-          <li>aplle</li>
-          <li>mango</li>
-          <li>orange</li>
+          <Buah name="aplle" />
+          <Buah name="mango" />
+          <Buah name="orange" />
         </ul>
       );
 
-      console.log("ok");
       ReactDOM.render(element, root);
     </script>
   </body>
