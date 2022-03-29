@@ -15,9 +15,15 @@
     <script>
       const root = document.querySelector("#root");
 
-      const element = React.createElement("h1", {
-        children: "Hello from React!",
-        className: "heading-1",
+      const p1 = React.createElement("p", {
+        children: "paragraf 1",
+      });
+      const p2 = React.createElement("p", {
+        children: "paragraf 2",
+      });
+
+      const element = React.createElement(React.Fragment, {
+        children: [p1, p2],
       });
 
       ReactDOM.render(element, root);
