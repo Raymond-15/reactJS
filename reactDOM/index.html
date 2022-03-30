@@ -20,6 +20,20 @@
         return <li>{props.name}</li>;
       }
 
+      function tick() {
+        const jam = (
+          <div>
+            <h1>Jam saat ini</h1>
+            {new Date().toLocaleTimeString()}
+          </div>
+        );
+        ReactDOM.render(jam, root);
+      }
+
+      setInterval(() => {
+        tick();
+      }, 1000);
+
       const element = (
         <ul className="list">
           <Buah name="aplle" />
@@ -28,7 +42,7 @@
         </ul>
       );
 
-      ReactDOM.render(element, root);
+      // ReactDOM.render(element, root);
     </script>
   </body>
 </html>
