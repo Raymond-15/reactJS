@@ -1,23 +1,14 @@
 const root = document.querySelector("#root");
 
 function App() {
-  const [diklik, setDiklik] = React.useState(false);
-
-  React.useEffect(() => {
-    console.log(document.getElementById("judul"));
-  });
+  const fruits = ["Apple", "Mango", "Berry", "Orange"];
 
   return (
-    <>
-      <h1 id="judul"> HELLO WORLD !!! </h1>
-      <button
-        onClick={function () {
-          setDiklik(true);
-        }}
-      >
-        klik aku
-      </button>
-    </>
+    <ul>
+      {fruits.map(function (fruit) {
+        return <li key={fruit}>{fruit}</li>;
+      })}
+    </ul>
   );
 }
 
