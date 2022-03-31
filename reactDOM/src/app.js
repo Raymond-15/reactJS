@@ -1,24 +1,21 @@
 const root = document.querySelector("#root");
 
 function App() {
-  const [count, updateCount] = React.useState(0);
+  const [diklik, setDiklik] = React.useState(false);
+
+  React.useEffect(() => {
+    console.log(document.getElementById("judul"));
+  });
 
   return (
     <>
+      <h1 id="judul"> HELLO WORLD !!! </h1>
       <button
         onClick={function () {
-          updateCount(count - 1);
+          setDiklik(true);
         }}
       >
-        -
-      </button>
-      <span> {count} </span>
-      <button
-        onClick={function () {
-          updateCount(count + 1);
-        }}
-      >
-        +
+        klik aku
       </button>
     </>
   );

@@ -1,16 +1,17 @@
 const root = document.querySelector("#root");
 
 function App() {
-  const [count, updateCount] = React.useState(0);
-  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("button", {
+  const [diklik, setDiklik] = React.useState(false);
+  React.useEffect(() => {
+    console.log(document.getElementById("judul"));
+  });
+  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("h1", {
+    id: "judul"
+  }, " HELLO WORLD !!! "), /*#__PURE__*/React.createElement("button", {
     onClick: function () {
-      updateCount(count - 1);
+      setDiklik(true);
     }
-  }, "-"), /*#__PURE__*/React.createElement("span", null, " ", count, " "), /*#__PURE__*/React.createElement("button", {
-    onClick: function () {
-      updateCount(count + 1);
-    }
-  }, "+"));
+  }, "klik aku"));
 }
 
 ReactDOM.render( /*#__PURE__*/React.createElement(App, null), root);
