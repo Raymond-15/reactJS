@@ -1,12 +1,30 @@
 const root = document.querySelector("#root");
 
-function saatKlik(msg) {
-  alert(msg);
+function App() {
+  const state = React.useState(0);
+
+  const count = state[0];
+  const updateCount = state[1];
+
+  return (
+    <>
+      <button
+        onClick={function () {
+          updateCount(count - 1);
+        }}
+      >
+        -
+      </button>
+      <span> {count} </span>
+      <button
+        onClick={function () {
+          updateCount(count + 1);
+        }}
+      >
+        +
+      </button>
+    </>
+  );
 }
 
-const element = (
-  <div>
-    <button onClick={saatKlik.bind(this, "berhasil")}>Click saya</button>
-  </div>
-);
-ReactDOM.render(element, root);
+ReactDOM.render(<App />, root);
